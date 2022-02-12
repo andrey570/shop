@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+.header{
+    position:fixed;
+    width: 100%;
+    min-height: 80px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px;
+    background-color: white;
+}
+.menu{
+    display:flex;
+    grid-gap:50px
+}
+.logo{
+    width: 150px;
+}
+.header_right-bar{
+    display: flex;
+    grid-gap:70px;
+}
+.form-search__btn{
+    display: block;
+    width: 20px;
+    height: 18px;
+    background-image: url("../images/kisspng-computer-icons-search-icon-5b30c8ad36d571.3385379615299237572246.jpg");
+    
+}
+.form-search__search{
+    background-color: transparent;
+    border: 1px solid black;
+    height: 30px;
+    padding-left: 5px;
+    display: none;
+}
+.open-cart{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-image: url("../images/empty_cart.png");
+    background-size: cover;
+    background-position: center;
+}
+.product{
+    width: 95%;
+    margin: 0 auto 100px;
+    display:grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+@media (max-width:1100px){
+    .product{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:768px){
+    .product{
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:540px){
+    .product{
+        grid-template-rows: repeat(12, auto);
+        grid-template-columns: 1fr;
+    }
+}
+.product__price{
+    color:red;
+    font-weight: bolder;
+}
+.product__add-cart{
+    margin-top: 35px;
+    height: 40px;
+    width: 170px;
+    background-color: red;
+    color:white;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.486);
+    
+}
+.cart__main{
+    width:500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    position:relative;
+}
+.cart__close{
+    display:block;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/close_cart.png);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:7px;
+    right:7px;
+}
+.cart__content{
+    overflow-y: auto;
+    height: 400px;
+    margin-top:50px;
+    padding:10px;
+}
